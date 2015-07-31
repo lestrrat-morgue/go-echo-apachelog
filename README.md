@@ -24,3 +24,10 @@ so you should keep the ApacheLog struct:
   l.LogFormat.SetOutput(newLogDestination)
 ```
 
+Or you can use [go-file-rotatelogs](https://github.com/lestrrat/go-file-rotatelogs)
+
+```go
+  rl := rotatelogs.NewRotateLogs( ... )
+  e.Use(apachelog.Logger(rl))
+```
+
